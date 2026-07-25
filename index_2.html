@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neighbor Check-In — House District 29</title>
+<meta name="description" content="Volunteer to check on four neighbors before and after a storm. Emergency kit checklist and official alert sources for Hawaiʻi.">
+<style>
+  :root{
+    --ink:#000;
+    --red:#CC0000;
+    --rule:#CCC;
+    --soft:#555;
+    --sans:Helvetica,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#FFF;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+  a{color:var(--red)}
+  a:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+  header{padding:48px 0 28px}
+  h1{font-size:30px;font-weight:700;line-height:1.2;margin:0 0 12px;letter-spacing:-.01em}
+  header p{margin:0;max-width:60ch}
+
+  section{padding:32px 0;border-top:1px solid var(--rule)}
+  h2{font-size:19px;font-weight:700;margin:0 0 14px}
+  h3{font-size:15px;font-weight:700;margin:0 0 8px}
+  p{margin:0 0 12px}
+  ol,ul{margin:0 0 12px;padding-left:22px}
+  li{margin-bottom:6px}
+  .note{color:var(--soft);font-size:14px}
+
+  /* form */
+  fieldset{border:0;margin:0 0 24px;padding:0}
+  legend{font-size:15px;font-weight:700;padding:0 0 10px}
+  .field{margin-bottom:12px}
+  label{display:block;font-size:14px;margin-bottom:4px}
+  input[type=text],input[type=tel],input[type=email]{width:100%;max-width:420px;padding:7px 8px;border:1px solid var(--ink);background:#FFF;font-family:var(--sans);font-size:15px;color:var(--ink)}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .row .field{flex:1 1 220px;margin-bottom:12px}
+  .row input{max-width:none}
+  .nbr{margin-bottom:16px}
+  .nbr h3{font-weight:400;font-size:14px;color:var(--soft)}
+  button.submit{padding:9px 20px;border:1px solid var(--ink);background:#FFF;color:var(--ink);font-family:var(--sans);font-size:15px;cursor:pointer}
+  button.submit:hover{background:var(--ink);color:#FFF}
+
+  /* checklist */
+  .kit{columns:2;column-gap:32px}
+  @media (max-width:620px){.kit{columns:1}}
+  .group{break-inside:avoid;margin-bottom:20px}
+  .group label{display:flex;gap:8px;align-items:flex-start;font-size:15px;margin-bottom:3px;cursor:pointer}
+  .group input{flex:0 0 14px;width:14px;height:14px;margin:3px 0 0;accent-color:var(--red);cursor:pointer}
+  .group em{font-style:normal;color:var(--soft)}
+  .tools{margin-top:8px;font-size:14px}
+  button.act{padding:5px 12px;border:1px solid var(--ink);background:#FFF;font-family:var(--sans);font-size:14px;cursor:pointer;margin-right:8px}
+  button.act:hover{background:var(--ink);color:#FFF}
+
+  footer{padding:32px 0 56px;border-top:1px solid var(--rule);font-size:14px;color:var(--soft)}
+  footer p{margin:0 0 8px}
+
+  @media print{
+    header,#signup,#alerts,footer,.tools{display:none}
+    section{border:0}
+    .kit{columns:2}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Neighbor Check-In: House District 29</h1>
+    <p>We're asking volunteers to check on four nearby households before and after a storm. This page collects volunteer sign-ups and lists the emergency kit contents recommended by the Hawaiʻi Emergency Management Agency.</p>
+  </div>
+</header>
+
+<section id="how">
+  <div class="wrap">
+    <h2>What volunteers do</h2>
+    <ol>
+      <li>Choose four households within walking distance. Priority: residents living alone, kūpuna, residents without a vehicle, households with infants.</li>
+      <li>When a watch or warning is issued, confirm each household has water, food, medication, and a working alert source.</li>
+      <li>After conditions clear, confirm each household is accounted for. Report medical emergencies to 911.</li>
+    </ol>
+    <p class="note">This is not an alert channel and does not replace official warnings. Emergencies: call 911.</p>
+  </div>
+</section>
+
+<section id="signup">
+  <div class="wrap">
+    <h2>Volunteer sign-up</h2>
+    <form name="block-captain" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+      <input type="hidden" name="form-name" value="block-captain">
+      <p style="display:none"><label>Leave blank: <input name="bot-field"></label></p>
+
+      <fieldset>
+        <legend>Volunteer</legend>
+        <div class="row">
+          <div class="field"><label for="n">Name</label><input id="n" type="text" name="name" required></div>
+          <div class="field"><label for="ph">Mobile number</label><input id="ph" type="tel" name="phone" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="em">Email (optional)</label><input id="em" type="email" name="email"></div>
+          <div class="field"><label for="st">Street or building</label><input id="st" type="text" name="street" required></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Four households</legend>
+        <div class="nbr"><h3>Household 1</h3>
+          <div class="row">
+            <div class="field"><label for="n1">Name</label><input id="n1" type="text" name="household_1_name" required></div>
+            <div class="field"><label for="a1">House or unit (optional)</label><input id="a1" type="text" name="household_1_where"></div>
+          </div>
+        </div>
+        <div class="nbr"><h3>Household 2</h3>
+          <div class="row">
+            <div class="field"><label for="n2">Name</label><input id="n2" type="text" name="household_2_name" required></div>
+            <div class="field"><label for="a2">House or unit (optional)</label><input id="a2" type="text" name="household_2_where"></div>
+          </div>
+        </div>
+        <div class="nbr"><h3>Household 3</h3>
+          <div class="row">
+            <div class="field"><label for="n3">Name</label><input id="n3" type="text" name="household_3_name" required></div>
+            <div class="field"><label for="a3">House or unit (optional)</label><input id="a3" type="text" name="household_3_where"></div>
+          </div>
+        </div>
+        <div class="nbr"><h3>Household 4</h3>
+          <div class="row">
+            <div class="field"><label for="n4">Name</label><input id="n4" type="text" name="household_4_name" required></div>
+            <div class="field"><label for="a4">House or unit (optional)</label><input id="a4" type="text" name="household_4_where"></div>
+          </div>
+        </div>
+        <div class="field"><label for="notes">Access or mobility notes (optional)</label><input id="notes" type="text" name="notes"></div>
+      </fieldset>
+
+      <button class="submit" type="submit">Submit</button>
+      <p class="note" style="margin-top:12px;max-width:60ch">Notify the households you list that you have signed up for them. This list is used only to route assistance during an emergency. It is not shared or sold. To have an entry removed, use the contact number below.</p>
+    </form>
+  </div>
+</section>
+
+<section id="kit">
+  <div class="wrap">
+    <h2>Emergency kit</h2>
+    <p class="note">Source: Hawaiʻi Emergency Management Agency, “Are You Ready?”</p>
+    <div class="kit">
+      <div class="group"><h3>Food and water — 14 days</h3>
+        <label><input type="checkbox"><span>1 gallon of water per person, per day</span></label>
+        <label><input type="checkbox"><span>Non-perishable food</span></label>
+        <label><input type="checkbox"><span>Manual can opener</span></label>
+        <label><input type="checkbox"><span>14-day supply of medications</span></label>
+      </div>
+      <div class="group"><h3>Power and signal</h3>
+        <label><input type="checkbox"><span>Battery or solar radio</span></label>
+        <label><input type="checkbox"><span>Flashlight</span></label>
+        <label><input type="checkbox"><span>Spare batteries for both</span></label>
+        <label><input type="checkbox"><span>Whistle</span></label>
+        <label><input type="checkbox"><span>Matches</span></label>
+      </div>
+      <div class="group"><h3>Documents, in a sealed bag</h3>
+        <label><input type="checkbox"><span>Identification, passport, license</span></label>
+        <label><input type="checkbox"><span>Bank and card information</span></label>
+        <label><input type="checkbox"><span>Insurance policies</span></label>
+        <label><input type="checkbox"><span>Healthcare directives</span></label>
+        <label><input type="checkbox"><span>Property titles and deeds</span></label>
+        <label><input type="checkbox"><span>Prescriptions and dosages</span></label>
+        <label><input type="checkbox"><span>Phone list of family and contacts</span></label>
+      </div>
+      <div class="group"><h3>Hygiene</h3>
+        <label><input type="checkbox"><span>Toothbrush and toothpaste</span></label>
+        <label><input type="checkbox"><span>Soap and shampoo</span></label>
+        <label><input type="checkbox"><span>Antibacterial hand wipes</span></label>
+        <label><input type="checkbox"><span>Toilet paper <em>(roll removed)</em></span></label>
+        <label><input type="checkbox"><span>Deodorant</span></label>
+        <label><input type="checkbox"><span>Eyecare supplies</span></label>
+        <label><input type="checkbox"><span>Moisturizing lotion</span></label>
+      </div>
+      <div class="group"><h3>Supplies</h3>
+        <label><input type="checkbox"><span>First aid kit</span></label>
+        <label><input type="checkbox"><span>Cash in small bills</span></label>
+        <label><input type="checkbox"><span>Blankets and tarps</span></label>
+        <label><input type="checkbox"><span>Plastic bags and ties for waste</span></label>
+      </div>
+      <div class="group"><h3>Per person and per pet</h3>
+        <label><input type="checkbox"><span>Change of clothes and sturdy shoes</span></label>
+        <label><input type="checkbox"><span>Cards or other entertainment</span></label>
+        <label><input type="checkbox"><span>Pet food and water</span></label>
+        <label><input type="checkbox"><span>Crate or carrier per pet</span></label>
+      </div>
+    </div>
+    <div class="tools">
+      <button class="act" onclick="window.print()">Print</button>
+      <button class="act" id="clear">Clear</button>
+      <span id="tally" class="note"></span>
+    </div>
+  </div>
+</section>
+
+<section id="alerts">
+  <div class="wrap">
+    <h2>Official alert sources</h2>
+    <ul>
+      <li>Oʻahu emergency notifications: <a href="https://hnl.info">hnl.info</a></li>
+      <li>Kauaʻi: <a href="https://www.kauai.gov">kauai.gov</a> · Maui: <a href="https://www.mauicounty.gov">mauicounty.gov</a> · Hawaiʻi Island: <a href="https://www.countyofhawaii.bbcportal.com">countyofhawaii.bbcportal.com</a></li>
+      <li>National Weather Service, Honolulu: <a href="https://www.weather.gov/hfo/">weather.gov/hfo</a></li>
+      <li>Central Pacific Hurricane Center: <a href="https://www.nhc.noaa.gov/?cpac">nhc.noaa.gov</a></li>
+      <li>Pacific Tsunami Warning Center: <a href="https://ptwc.weather.gov">ptwc.weather.gov</a></li>
+      <li>NOAA weather radio: <a href="https://www.weather.gov/nwr/">weather.gov/nwr</a></li>
+      <li>Hawaiʻi Emergency Management Agency: <a href="https://dod.hawaii.gov/hiema">dod.hawaii.gov/hiema</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <!-- REPLACE the number in both the link text and the tel: href. -->
+    <p>Rep. Ikaika Hussey, House District 29 — <a href="tel:+18085550000">(808) 808-221-2843</a></p>
+    <p>Emergencies: call 911.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#kit input[type=checkbox]'));
+  var tally = document.getElementById('tally');
+  function update(){
+    var n = boxes.filter(function(b){return b.checked;}).length;
+    tally.textContent = n + ' of ' + boxes.length;
+  }
+  boxes.forEach(function(b){ b.addEventListener('change', update); });
+  document.getElementById('clear').addEventListener('click', function(){
+    boxes.forEach(function(b){ b.checked = false; }); update();
+  });
+  update();
+})();
+</script>
+</body>
+</html>
